@@ -1,0 +1,495 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CDN GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Tailwind Portfolio</title>
+</head>
+
+
+
+<body class="font-Poppin">
+
+    <!-- Gsap -->
+    <style>
+
+    </style>
+    <!-- Gsap End -->
+
+    <!-- into section -->
+    <div class="flex w-[100%] h-[100%] fixed z-[999999999999] top-0 left-0" id="loading">
+        <div class="bg-cyan-400 h-full w-[100%]"></div>
+    </div>
+
+    <div
+        class="h-1/2 lg:h-screen bg-gradient-to-t  from-indigo-200 dark:from-slate-900 dark:to-cyan-300 relative overflow-hidden">
+        <!-- navbar -->
+        <nav class="w-full fixed top-0 bg-gradient-to-t from-slate-400 z-20 dark:bg-slate-900">
+            <div class="container mx-auto py-5 flex items-center justify-between">
+
+                <ul class="hidden md:flex mx-auto space-x-10 text-black dark:text-gray-100 font-bold text-sm uppercase">
+                    <li class="hover:text-yellow-200">
+                        <a href="#">Homepage</a>
+                    </li>
+                    <li class="hover:text-yellow-200">
+                        <a href="#about">About me</a>
+                    </li>
+                    <li class="hover:text-yellow-200">
+                        <a href="#skill">Skill</a>
+                    </li>
+                    <li class="hover:text-yellow-200">
+                        <a href="#certificate">Certificate</a>
+                    </li>
+                    <li class="hover:text-yellow-200">
+                        <a href="#cv">CV</a>
+                    </li>
+                    <li class="hover:text-yellow-200">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center mr-16">
+                    <i class="ri-moon-line cursor-pointer ml-4 text-xl" id="theme-toggle"></i>
+                </div>
+
+                <div class="md:hidden " id="hamburger">
+                    <i class="ri-menu-2-line cursor-pointer text-xl "></i>
+                </div>
+
+                <ul id="nav-menu"
+                    class="hidden bg-indigo-900 absolute  left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                    <li>
+                        <a id="hLink" href="#">Homepage</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#about">About me</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a id="hLink" href="#contact">Contact</a>
+                    </li>
+
+                    <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <!-- intro content -->
+        <!-- image -->
+        <img class="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover" src="/src/public/img/Zriel.png"
+            alt="" />
+        <!-- circle -->
+        <div
+            class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-indigo-900 rounded-full -z-20">
+        </div>
+        <!-- animated text -->
+        <div
+            class="absolute top-1/3 left-5 text-2xl sm:left-10 sm:text-4xl md:left-1/4 md:text-2xl lg:left-5 xl:left-48 xl:text-4xl font-bold">
+            <span class="text-gray-600">Hi IM</span>
+            <p id="text" class="text-red-500"></p>
+        </div>
+        <!-- texts -->
+        <div
+            class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3">
+            <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Muhamad Azriel Ilham</h1>
+            <p class="text-gray-400">
+                IM STUDY AT IDN BOARDING SCHOOL NOW IM X RPL STUDENT
+            </p>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+        <div class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
+            <!-- left -->
+            <div class="relative">
+                <div class="h-full rounded-full overflow-hidden">
+                    <img src="/src/public/img/Rill.png" id="audiCs" width="500px" alt="" />
+                </div>
+            </div>
+            <!-- right -->
+            <div class="my-auto flex flex-col gap-3">
+                <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+                <h1 class="text-3xl font-medium dark:text-white">Palembang</h1>
+                <h1 class="text-3xl font-medium dark:text-white">
+                    7/17/2007
+                </h1>
+                <p class="text-gray-400 font-Poppins">
+                    Live In South Sumatra, Palembang, Now Im 16 Years Old, Now Im Study At IDN BOARDING SCHOOL,And Im
+                    Live With My Father,My Mother,And My Sister,
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Start carousel Skill-->
+    <div id="skill" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold text-3xl">My Skill</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                    This Skill Im learn't in IDN BOARDING SCHOOL SENTUL
+                </p>
+            </div>
+
+
+            <section>
+                <marquee width="100%" behavior="scroll" scrollamount="15" direction="right">
+                    <div
+                        class="mt-20 mx-4 mb-20 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-6 lg:gap-6 lg:mx-12">
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg shadow-black shadow-lg mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/html.png" alt="image" />
+                                <h5 class="mb-1 text-xl font-medium dark:text-white mt-6">HTML</h5>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg shadow-black shadow-lg  mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/css-3.png" alt="image" />
+                                <h5 class="mb-1 text-xl font-medium mt-6  dark:text-white">CSS</h5>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800  rounded-lg shadow-black shadow-lg  mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/js.png" alt="image" />
+                                <h5 class="mb-1 text-xl font-medium  dark:text-white mt-6">JavaScript</h5>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800  rounded-lg shadow-black shadow-lg  mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/php.png" alt="image" />
+                                <h5 class="mb-1 text-xl font-medium  dark:text-white mt-6">PHP</h5>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800  rounded-lg shadow-black shadow-lg  mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/bootstrap.png" alt="image" />
+                                <h5 class="mb-1 text-xl mt-6 font-medium  dark:text-white  ">BootStrap</h5>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full max-w-sm bg-white dark:bg-gray-800  rounded-lg shadow-black shadow-lg  mt-5 lg:mb-6">
+                            <div class="flex flex-col items-center pb-10  ">
+                                <img class="w-36 h-32 mb-3 mt-6" src="img/tailwind.png" alt="image" />
+                                <h5 class="mb-1 text-xl font-medium  dark:text-white mt-6">Tailwind</h5>
+                            </div>
+                        </div>
+                    </div>
+                </marquee>
+            </section>
+        </div>
+        <!-- end carousel Skill-->
+
+        <!-- Start Certificate -->
+        <section>
+            <div id="certificate" class="dark:bg-slate-900">
+                <div class="container mx-auto">
+                    <div class="flex flex-col gap-3 items-center">
+                        <h1 class="text-indigo-600 font-bold text-3xl">My Skill</h1>
+                        <p class="w-1/2 text-center text-gray-400">
+                            This Certificate When Im in IDN BOARDING SCHOOL SENTUL
+                        </p>
+                    </div>
+
+                    <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 mt-10">
+                        <!-- card no 1 -->
+                        <div
+                            class="relative overflow-hidden w-full  h-80 rounded-3xl cursor-pointer text-2xl font-bold bg-gray-600 shadow-lg shadow-black">
+                            <div class="z-10 absolute w-full h-full peer"></div>
+                            <div
+                                class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                                See More<br />Certificate
+                            </div>
+                            <div class="w-full h-full items-center justify-center flex uppercase">
+                                <img src="/src/public/img/sertifikat1_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+
+
+                        <!-- card no 2 -->
+                        <div
+                            class="relative overflow-hidden w-full h-80 rounded-3xl cursor-pointer text-2xl font-bold bg-gray-600 shadow-lg shadow-black">
+                            <div class="z-10 absolute w-full h-full peer"></div>
+                            <div
+                                class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                                See More<br />Certificate
+                            </div>
+                            <div class="w-full h-full items-center justify-center flex uppercase">
+                                <img src="/src/public/img/sertifikat2_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- card no 3 -->
+                        <div
+                            class="relative overflow-hidden w-full  h-80 rounded-3xl cursor-pointer text-2xl font-bold bg-gray-600 shadow-lg shadow-black">
+                            <div class="z-10 absolute w-full h-full peer"></div>
+                            <div
+                                class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                                See More<br />Certificate
+                            </div>
+                            <div class="w-full h-full items-center justify-center flex uppercase">
+                                <img src="/src/public/img/sertifikat3_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-2 mt-10 mx-2">
+                        <!-- card 4 -->
+                        <div
+                            class="relative overflow-hidden w-full  h-96 rounded-3xl cursor-pointer text-2xl font-bold bg-gray-600 shadow-lg shadow-black">
+                            <div class="z-10 absolute w-full h-full peer"></div>
+                            <div
+                                class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                                See More<br />Certificate
+                            </div>
+                            <div class="w-full h-full items-center justify-center flex uppercase">
+                                <img src="/src/public/img/sertifikat4_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- card 5 -->
+                        <div
+                            class="relative overflow-hidden w-full  h-96 rounded-3xl cursor-pointer text-2xl font-bold bg-gray-600 shadow-lg shadow-black">
+                            <div class="z-10 absolute w-full h-full peer"></div>
+                            <div
+                                class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-purple-300 transition-all duration-500">
+                                See More<br />Certificate
+                            </div>
+                            <div class="w-full h-full items-center justify-center flex uppercase">
+                                <img src="/src/public/img/sertificat5_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- End Certificate -->
+
+        <!-- Cv Start -->
+        <section class="mt-10">
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-indigo-600 font-bold text-3xl">My CV</h1>
+            </div>
+
+            <div
+                class="relative flex w-[200vh] mx-auto mt-10 flex-col rounded-xl bg-gray-600 bg-clip-border text-gray-700 shadow-md">
+                <div
+                    class="relative mx-4 -mt-6 h-[80vh] overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    <img src="/src/public/img/Screenshot 2024-03-27 082012.png" class="w-full" alt="">
+                </div>
+                <div class="p-6">
+                    <h5
+                        class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-white antialiased">
+                        Read More About My Cv
+                    </h5>
+                </div>
+                <div class="p-6 pt-0 mx-auto">
+                    <button
+                        class="bg-cyan-950 text-cyan-400 border border-cyan-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                        <span
+                            class="bg-cyan-400 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                        More!!
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Cv End -->
+
+
+        <!-- footer start -->
+        <footer>
+            <section class="footer">
+                <div id="contact"
+                    class=" bg-gray-600 mt-96  mx-auto shadow-black shadow-lg dark:shadow-white dark:shadow-lg">
+                    <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
+                        <li>
+                            <div class="space-y-3">
+                                <h1 class="text-4xl font-oswald uppercase ">
+                                    PORTFOLIO
+                                </h1>
+
+                                <p class="text-xs">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                                    ullamcorper mattis,
+                                    pulvinar dapibus leo.
+                                </p>
+                            </div>
+                        </li>
+
+
+                        <li class="space-y-8">
+                            <div class="space-y-2">
+                                <h3 class="text-lg uppercase font-oswald">phone</h3>
+
+                                <p class="flex items-center gap-2 text-xs">
+                                    <i class="fa-solid fa-phone text-lg text-yellow-300"></i>
+                                    +62 81273085980
+                                </p>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="text-lg uppercase font-oswald">email</h3>
+
+                                <p class="flex items-center gap-2 text-xs">
+                                    <i class="fa-solid fa-envelope text-lg text-yellow-300"></i>
+                                    mazrielilham4@gmail.com
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="space-y-8">
+                            <div class="space-y-2">
+                                <h3 class="text-lg uppercase font-oswald">address</h3>
+
+                                <p class="flex items-center gap-2 text-xs">
+                                    <i class="fa-solid fa-location-dot text-lg text-yellow-300"></i>
+                                    Sumatra Selatan,Palembang,Talang Kelapa,Centraland Residence,Palm Kuning,No 21
+                                </p>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="text-lg uppercase font-oswald">follow me</h3>
+
+                                <div class="space-x-3">
+                                    <i
+                                        class="fa-brands fa-facebook-f text-lg cursor-pointer text-yellow-300 hover:-translate-y-1 ease-in duration-200"></i>
+                                    <i
+                                        class="fa-brands fa-twitter text-lg cursor-pointer text-yellow-300 hover:-translate-y-1 ease-in duration-200"></i>
+                                    <i
+                                        class="fa-brands fa-square-instagram text-lg cursor-pointer text-yellow-300 hover:-translate-y-1 ease-in duration-200"></i>
+                                    <i
+                                        class="fa-brands fa-linkedin text-lg cursor-pointer text-yellow-300 hover:-translate-y-1 ease-in duration-200"></i>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <div class="card mt-5">
+                            <div
+                                class="relative bg-black w-[150px] sm:w-[300px] group transition-all duration-700 aspect-video flex items-center justify-center">
+                                <div
+                                    class="transition-all flex flex-col items-center py-5 justify-start duration-300 group-hover:duration-1000 bg-cyan-200 w-full h-full absolute group-hover:-translate-y-16">
+                                    <p class="text-xl sm:text-2xl font-semibold text-gray-500 font-serif">
+                                        Thank You
+                                    </p>
+                                    <p class="px-10 text-[10px] sm:text-[12px] text-gray-700">
+                                        And Nice Meet You
+                                    </p>
+                                </div>
+                                <button
+                                    class="seal bg-rose-500 text-red-800 w-10 aspect-square rounded-full z-40 text-[10px] flex items-center justify-center font-semibold [clip-path:polygon(50%_0%,_80%_10%,_100%_35%,_100%_70%,_80%_90%,_50%_100%,_20%_90%,_0%_70%,_0%_35%,_20%_10%)] group-hover:opacity-0 transition-all duration-1000 group-hover:scale-0 group-hover:rotate-180 border-4 border-rose-900">
+                                    OPEN
+                                </button>
+                                <div
+                                    class="tp transition-all duration-1000 group-hover:duration-100 bg-neutral-800 absolute group-hover:[clip-path:polygon(50%_0%,_100%_0,_0_0)] w-full h-full [clip-path:polygon(50%_50%,_100%_0,_0_0)]">
+                                </div>
+                                <div
+                                    class="lft transition-all duration-700 absolute w-full h-full bg-neutral-900 [clip-path:polygon(50%_50%,_0_0,_0_100%)]">
+                                </div>
+                                <div
+                                    class="rgt transition-all duration-700 absolute w-full h-full bg-neutral-800 [clip-path:polygon(50%_50%,_100%_0,_100%_100%)]">
+                                </div>
+                                <div
+                                    class="btm transition-all duration-700 absolute w-full h-full bg-neutral-900 [clip-path:polygon(50%_50%,_100%_100%,_0_100%)]">
+                                </div>
+                            </div>
+                        </div>
+
+                    </ul>
+
+                    <div
+                        class="flex flex-col items-center border-t border-grabg-gray-600 dark:border-darkColorLight py-5 md:flex-row md:justify-between">
+                        <p class="paragraph">Copyright © Muhamad Azriel Ilham</p>
+
+                        <button
+                            class="group flex justify-center items-center mr-20 gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-10 py-4 border text-left p-3 text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
+
+
+                            <a href="https://github.com/azriel123123">
+                                <svg class="w-6 h-6 fill-neutral-50" height="100" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                                    <path class="svg-fill-primary"
+                                        d="M50,1.23A50,50,0,0,0,34.2,98.68c2.5.46,3.41-1.09,3.41-2.41s0-4.33-.07-8.5c-13.91,3-16.84-6.71-16.84-6.71-2.28-5.77-5.55-7.31-5.55-7.31-4.54-3.1.34-3,.34-3,5,.35,7.66,5.15,7.66,5.15C27.61,83.5,34.85,81.3,37.7,80a10.72,10.72,0,0,1,3.17-6.69C29.77,72.07,18.1,67.78,18.1,48.62A19.34,19.34,0,0,1,23.25,35.2c-.52-1.26-2.23-6.34.49-13.23,0,0,4.19-1.34,13.75,5.13a47.18,47.18,0,0,1,25,0C72.07,20.63,76.26,22,76.26,22c2.72,6.89,1,12,.49,13.23a19.28,19.28,0,0,1,5.14,13.42c0,19.21-11.69,23.44-22.83,24.67,1.8,1.55,3.4,4.6,3.4,9.26,0,6.69-.06,12.08-.06,13.72,0,1.34.9,2.89,3.44,2.4A50,50,0,0,0,50,1.23Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/azriel123123">Github</a>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- footer end -->
+
+
+
+        <!-- Scroll Up Start -->
+        <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+        <a href="#"
+            class="fixed right-4 -bottom-1/2 bg-yetext-yellow-300 shadow-sm bg-yellow-200 inline-block px-4 py-2 rounded-full text-lg text-blackColor z-50 hover:-translate-y-1 ease-in duration-200"
+            id="scroll-up">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <!-- Scroll Up End -->
+
+
+        <script src="/src/public/gsap-animation.js"></script>
+        <script src="/src/public/app.js"></script>
+        <script src="/src/public/autotyping.js"></script>
+        <script src="/src/public/scroll-up.js"></script>
+</body>
+
+</html>
